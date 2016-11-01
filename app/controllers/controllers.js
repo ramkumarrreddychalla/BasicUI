@@ -26,11 +26,14 @@ app.controller('ProfileController', ['$scope', 'ProfileService', function($scope
         ProfileService.fetchAllProfiles()
             .then(
             function(profobj) {
+               window.alert(' just enter'+profobj[0]);
                 $scope.profile = profobj[0];
 								console.log(profobj);
+                window.alert('hello');
 								//console.log(profobj.address);
             },
             function(errResponse){
+                window.alert('hello exp'+errResponse);
                 console.error('Error while fetching Profiles');
             }
         );

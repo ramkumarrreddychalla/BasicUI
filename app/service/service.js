@@ -14,6 +14,7 @@ angular.module('myApp').factory('ProfileService', ['$http', '$q', function($http
 
     function fetchAllProfiles() {
         var deferred = $q.defer();
+        alert('REST_SERVICE_URI ::'+REST_SERVICE_URI);
         $http.get(REST_SERVICE_URI)
             .then(
             function (response) {
